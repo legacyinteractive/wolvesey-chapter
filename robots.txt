@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wolvesey-chapter.jack-576.workers.dev/sitemap.xml

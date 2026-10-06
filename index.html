@@ -9,6 +9,9 @@
   <meta property="og:title" content="Wolvesey Chapter No. 6818 | Royal Arch Freemasons in Winchester">
   <meta property="og:description" content="Building on the foundations. A continuing journey in Royal Arch Freemasonry in Winchester, Hampshire.">
   <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://wolvesey-chapter.jack-576.workers.dev/">
+  <link rel="canonical" href="https://wolvesey-chapter.jack-576.workers.dev/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="color-scheme" content="dark light">
   <title>Wolvesey Chapter No. 6818 | Royal Arch Freemasons | Winchester</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +41,17 @@
     .text-link{display:inline-flex;align-items:center;gap:12px;font-size:.84rem;font-weight:700;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.42);padding-bottom:7px;transition:gap .2s ease}
     .text-link:hover{gap:19px}
     .masthead{position:relative;z-index:20;background:var(--ink);border-top:4px solid var(--red);border-bottom:1px solid var(--line)}
-    .masthead__inner{display:flex;align-items:center;min-height:103px;gap:24px}
-    .brand{display:flex;align-items:center;gap:16px;min-width:285px}
+    .masthead__inner{display:flex;align-items:center;min-height:112px;gap:22px}
+    .brand{display:flex;align-items:center;gap:16px;min-width:278px;flex-shrink:0}
+    .brand__text{display:flex;flex-direction:column;justify-content:center;min-width:0}
     .brand__symbol{width:58px;height:58px;flex:0 0 58px;color:var(--red-bright)}
-    .brand__name{font:normal 1.55rem/.93 var(--display);letter-spacing:-.025em;white-space:nowrap}
+    .brand__name{display:block;font:normal 1.55rem/1.02 var(--display);letter-spacing:-.025em;white-space:nowrap}
     .brand__name span{display:block}
-    .brand__strap{margin-top:9px;font-size:.53rem;line-height:1.45;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:#bcb9b9}
-    .nav{display:flex;justify-content:flex-end;align-items:center;gap:clamp(13px,1.45vw,29px);flex:1;align-self:end;margin-bottom:30px}
+    .brand__strap{display:block;margin-top:10px;font-size:.56rem;line-height:1.55;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#bcb9b9}
+    .nav{display:flex;justify-content:flex-end;align-items:center;gap:clamp(12px,1.35vw,26px);flex:1;align-self:center;margin:0 0 0 auto;min-width:0}
     .nav a{font-size:.73rem;font-weight:600;color:#e8e5e4;white-space:nowrap;transition:color .2s ease}
     .nav a:hover,.nav a:focus-visible{color:#ff778a}
-    .member-top{align-self:flex-start;margin-top:18px;margin-left:4px;white-space:nowrap;min-height:43px;padding:10px 16px;font-size:.73rem}
+    .member-top{align-self:center;margin:0 0 0 8px;white-space:nowrap;min-height:43px;padding:10px 16px;font-size:.73rem}
     .hamburger{display:none;color:white;border:1px solid #49474a;padding:10px;background:transparent;margin-left:auto}
     .hamburger svg{width:25px;height:25px;display:block}
     .hero{position:relative;isolation:isolate;overflow:hidden;min-height:665px;background:#0a0a0c}
@@ -84,7 +88,11 @@
     .meetings{display:grid;grid-template-columns:1fr 1fr;min-height:550px;scroll-margin-top:100px}
     .meetings__image{position:relative;overflow:hidden;min-height:510px;background:linear-gradient(135deg,#251319,#09090b)}
     .meetings__image img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.78);position:absolute;inset:0}
-    .meetings__image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 85%)}
+    .meetings__image::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,transparent,rgba(0,0,0,.56) 85%);pointer-events:none}
+    .meetings__brand-art{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;text-align:center;background:radial-gradient(circle at 52% 38%,#7a1228 0%,#230a10 45%,#09090b 89%);padding:35px;color:#fff}
+    .meetings__brand-art svg{width:132px;max-width:35%;height:auto;color:#ef3e59;margin-bottom:12px;filter:drop-shadow(0 12px 28px #0009)}
+    .meetings__brand-art strong{font:normal clamp(3.2rem,5.5vw,6rem)/.86 var(--display);letter-spacing:-.045em}
+    .meetings__brand-art>span:last-child{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:#e9a5b1}
     .photo-note{position:absolute;bottom:14px;left:22px;z-index:1;color:#fff9;font-size:.64rem;background:#08080894;padding:7px 10px}
     .meetings__content{padding:65px clamp(35px,6.4vw,108px) 58px;background:#111113;display:flex;flex-direction:column;justify-content:center}
     .meetings__content h2{font:normal clamp(2.2rem,3.4vw,3.7rem)/1.05 var(--display);margin:12px 0 29px}
@@ -139,6 +147,24 @@
     .footer__links a:hover{color:#ff6a82}
     .footer__bottom{display:flex;justify-content:space-between;gap:20px;color:#858082;padding-top:25px;font-size:.65rem;line-height:1.65}
     .footer__bottom a{text-decoration:underline;text-underline-offset:3px}
+
+    .footer{background:#09090c;border-top:3px solid var(--red);padding:70px 0 26px}
+    .footer__main{display:grid;grid-template-columns:minmax(255px,1.45fr) repeat(3,minmax(140px,1fr));column-gap:clamp(24px,4vw,62px);row-gap:38px;padding-bottom:53px;border-bottom:1px solid var(--line)}
+    .footer__identity .brand{min-width:0;justify-content:flex-start}
+    .footer__identity p{max-width:370px;color:#bbb6b9;line-height:1.8;font-size:.85rem;margin:25px 0 17px}
+    .footer__identity address{font-style:normal;color:#e9e2e4;font-size:.82rem;line-height:1.75}
+    .footer__identity address span{color:#969095;font-size:.76rem}
+    .footer__column{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding-top:9px}
+    .footer__column h2{font:700 .73rem/1.5 var(--body);letter-spacing:.15em;text-transform:uppercase;color:#f5546c;margin:0 0 8px}
+    .footer__column>a{font-size:.79rem;line-height:1.6;color:#e5e0e1;text-decoration:none;text-underline-offset:4px}
+    .footer__column>a:hover{text-decoration:underline;color:#fff}
+    .footer__column p{font-size:.77rem;line-height:1.75;color:#a8a0a2;margin:9px 0 0}
+    .footer__bottom{display:flex;justify-content:space-between;gap:20px;padding:27px 0 0;color:#bab3b6;font-size:.72rem;line-height:1.65}
+    .footer__credits{margin-top:19px;color:#8e8589;font-size:.64rem;line-height:1.7}
+    .footer__credits a{text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:1080px){.footer__main{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:42px}}
+    @media(max-width:650px){.footer__main{grid-template-columns:1fr;gap:30px}.footer__bottom{flex-direction:column;gap:6px}.footer__identity p{margin-top:18px}}
+
     .dialog{border:1px solid #5a343e;background:#161417;color:#fff;max-width:520px;width:calc(100vw - 32px);padding:36px 40px;box-shadow:0 28px 80px #000a}
     .dialog::backdrop{background:#000b;backdrop-filter:blur(4px)}
     .dialog h2{font:normal 2.65rem/1.05 var(--display);margin:11px 0 15px}
@@ -156,7 +182,7 @@
       .hero h1{font-size:clamp(5rem,9vw,7.5rem)}
       .meetings__content{padding-inline:40px}
     }
-    @media(max-width:900px){
+    @media(max-width:1050px){
       .shell{width:min(100% - 44px,1440px)}
       .masthead__inner{min-height:88px;flex-wrap:wrap}
       .brand{min-width:0}
@@ -227,7 +253,7 @@
     @media(max-width:360px){.hero h1{font-size:4.2rem}.brand__name{font-size:1.08rem}.quicklink h3{font-size:1.18rem}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Wolvesey Chapter No. 6818","description":"Royal Arch Chapter in Winchester, Hampshire, England.","address":{"@type":"PostalAddress","addressLocality":"Winchester","addressRegion":"Hampshire","addressCountry":"GB"},"sameAs":["https://x.com/wolveseycomp","https://www.facebook.com/share/19yYhRCYd8/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter","name":"Wolvesey Chapter No. 6818","description":"A Royal Arch Chapter of Freemasons meeting in Winchester, Hampshire, England.","url":"https://wolvesey-chapter.jack-576.workers.dev/","address":{"@type":"PostalAddress","addressLocality":"Winchester","addressRegion":"Hampshire","addressCountry":"GB"},"sameAs":["https://x.com/wolveseycomp","https://www.facebook.com/share/19yYhRCYd8/"]},{"@type":"WebSite","@id":"https://wolvesey-chapter.jack-576.workers.dev/#website","url":"https://wolvesey-chapter.jack-576.workers.dev/","name":"Wolvesey Chapter No. 6818","inLanguage":"en-GB","publisher":{"@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -248,7 +274,7 @@
   <div class="masthead__inner shell">
     <a class="brand" href="#home" aria-label="Wolvesey Chapter No. 6818, home">
       <svg class="brand__symbol" aria-hidden="true"><use href="#ra-mark"/></svg>
-      <span>
+      <span class="brand__text">
         <span class="brand__name"><span>Wolvesey Chapter</span><span>No. 6818</span></span>
         <span class="brand__strap">Royal Arch Freemasons<br>Winchester, Hampshire</span>
       </span>
@@ -308,8 +334,12 @@
 
   <section class="meetings" id="meetings" aria-labelledby="meetings-heading">
     <div class="meetings__image">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Arch_and_Steward_masonic_jewels,_Redruth,_Cornwall_-_September_2023.jpg?width=1200" loading="lazy" alt="Illustrative photograph of Royal Arch and Steward masonic jewels, photographed in Redruth, Cornwall">
-      <span class="photo-note">Illustrative Royal Arch jewels • not Wolvesey regalia</span>
+      <div class="meetings__brand-art" role="img" aria-label="Wolvesey Chapter Royal Arch branding, awaiting an approved photograph from the Chapter">
+        <svg aria-hidden="true" viewBox="0 0 80 80"><use href="#ra-mark"/></svg>
+        <span class="eyebrow">Winchester · Hampshire</span>
+        <strong>Wolvesey<br>Chapter</strong>
+        <span>No. 6818 · Royal Arch Freemasons</span>
+      </div>
     </div>
     <div class="meetings__content">
       <p class="eyebrow">Gathering in Winchester</p>
@@ -335,8 +365,8 @@
         <a class="btn" href="#visit">Visiting &amp; Enquiries <svg aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
       <aside class="story__quote">
-        <p>Building on the foundations of the Craft.</p>
-        <span>A continuing journey</span>
+        <p>the best chapter in the universe</p>
+        <span>Wolvesey Chapter No. 6818</span>
       </aside>
     </div>
   </section>
@@ -391,24 +421,48 @@
   </section>
 </main>
 
-<footer class="footer">
+
+<footer class="footer" role="contentinfo">
   <div class="shell">
-    <div class="footer__top">
-      <div>
-        <a class="brand" href="#home" aria-label="Return to top of Wolvesey Chapter homepage">
+    <div class="footer__main">
+      <div class="footer__identity">
+        <a class="brand" href="#home" aria-label="Wolvesey Chapter No. 6818 — return to homepage">
           <svg class="brand__symbol" aria-hidden="true"><use href="#ra-mark"/></svg>
-          <span><span class="brand__name"><span>Wolvesey Chapter</span><span>No. 6818</span></span><span class="brand__strap">Royal Arch Freemasons<br>Winchester, Hampshire</span></span>
+          <span class="brand__text"><span class="brand__name"><span>Wolvesey Chapter</span><span>No. 6818</span></span><span class="brand__strap">Royal Arch Freemasons<br>Winchester, Hampshire</span></span>
         </a>
-        <p>Building on the foundations. A continuing journey of friendship, knowledge and truth.</p>
+        <p>Wolvesey Chapter No. 6818 is a Royal Arch Chapter in Winchester, Hampshire, bringing Companions together in friendship and the continuing journey of Freemasonry.</p>
+        <address>Winchester, Hampshire, England<br><span>Visitors are asked to arrange attendance in advance.</span></address>
       </div>
-      <nav class="footer__links" aria-label="Footer navigation">
-        <a href="#royal-arch">The Royal Arch</a><a href="#our-chapter">Our Chapter</a><a href="#meetings">Meetings</a><a href="#news">News</a><a href="#visit">Visiting</a><a href="https://x.com/wolveseycomp?s=11" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.facebook.com/share/19yYhRCYd8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.ugle.org.uk/about-us/royal-arch/join-royal-arch" target="_blank" rel="noopener noreferrer">UGLE</a>
+      <nav class="footer__column" aria-label="Explore Wolvesey Chapter">
+        <h2>Explore the Chapter</h2>
+        <a href="#home">Wolvesey Chapter home</a>
+        <a href="#our-chapter">About Wolvesey Chapter</a>
+        <a href="#royal-arch">What is the Royal Arch?</a>
+        <a href="#meetings">Chapter meeting dates</a>
+        <a href="#news">News and events</a>
+        <a href="#visit">Visiting Wolvesey</a>
+      </nav>
+      <nav class="footer__column" aria-label="Freemasonry and local information">
+        <h2>Royal Arch Freemasonry</h2>
+        <a href="https://www.ugle.org.uk/about-us/royal-arch/join-royal-arch" target="_blank" rel="noopener noreferrer">United Grand Lodge of England <span aria-hidden="true">↗</span></a>
+        <a href="https://hantsiowfreemasons.org/the-royal-arch/the-royal-arch-further-information/" target="_blank" rel="noopener noreferrer">Hampshire &amp; Isle of Wight <span aria-hidden="true">↗</span></a>
+        <a href="https://wolveseylodge.co.uk/" target="_blank" rel="noopener noreferrer">Wolvesey Lodge No. 6818 <span aria-hidden="true">↗</span></a>
+        <a href="privacy.html">Privacy information</a>
+        <a href="accessibility.html">Accessibility</a>
+      </nav>
+      <nav class="footer__column" aria-label="Contact and social media">
+        <h2>Contact &amp; follow</h2>
+        <a href="#contact">Contact the Chapter</a>
+        <a href="https://www.facebook.com/share/19yYhRCYd8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Wolvesey Chapter on Facebook <span aria-hidden="true">↗</span></a>
+        <a href="https://x.com/wolveseycomp?s=11" target="_blank" rel="noopener noreferrer">Wolvesey Chapter on X <span aria-hidden="true">↗</span></a>
+        <p>Interested in visiting or joining the Royal Arch? Please contact us before attending a meeting.</p>
       </nav>
     </div>
     <div class="footer__bottom">
-      <span>© <span id="year">2026</span> Wolvesey Chapter No. 6818. Winchester, Hampshire.</span>
-      <span>Photography via Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Winchester_Cathedral,_nave_looking_east.jpg" target="_blank" rel="noopener noreferrer">Cathedral</a> (Poliphilo, CC0), <a href="https://commons.wikimedia.org/wiki/File:Winchester_High_Street_(2).jpg" target="_blank" rel="noopener noreferrer">Winchester</a> (Shlumble, CC0), <a href="https://commons.wikimedia.org/wiki/File:Royal_Arch_and_Steward_masonic_jewels,_Redruth,_Cornwall_-_September_2023.jpg" target="_blank" rel="noopener noreferrer">Jewels</a> (Mutney, CC0).</span>
+      <span>© <span id="year">2026</span> Wolvesey Chapter No. 6818. All rights reserved.</span>
+      <span>Royal Arch Freemasonry · Winchester · Hampshire · United Kingdom</span>
     </div>
+    <div class="footer__credits">Image credits: <a href="https://commons.wikimedia.org/wiki/File:Winchester_Cathedral,_nave_looking_east.jpg" target="_blank" rel="noopener noreferrer">Winchester Cathedral (Poliphilo, CC0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Winchester_High_Street_(2).jpg" target="_blank" rel="noopener noreferrer">Winchester High Street (Shlumble, CC0)</a>.</div>
   </div>
 </footer>
 

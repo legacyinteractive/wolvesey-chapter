@@ -39,3 +39,7 @@ For a manual production deploy with your Cloudflare credentials available, run `
 ### Deployment health check
 
 After a successful deployment, open `/health.txt` on the Worker domain. A response of `ok: wolvesey-chapter` confirms the updated static assets are being served. This endpoint does not check external image hosts or private authentication.
+
+## Homepage polish (October 2026)
+
+Navigation and brand alignment, footer structure, privacy and accessibility pages, SEO metadata, sitemap, and favicon are included. The unrelated Cornwall regalia image has been removed. **A genuine Wolvesey Chapter Facebook photograph must be supplied and checked for permission to reuse before insertion**; social share URLs are not stable image URLs. The Workers development hostname is the current canonical URL: update canonical and sitemap together when the permanent domain is chosen.

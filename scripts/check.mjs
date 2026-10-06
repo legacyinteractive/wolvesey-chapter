@@ -10,6 +10,12 @@ for (const id of ['content','home','our-chapter','royal-arch','news','meetings',
   assert.ok(html.includes('id="' + id + '"'), 'Missing anchor: ' + id);
 }
 assert.ok(html.includes('The private Chapter area is being prepared.'), 'Members area must not claim working authentication');
+for (const path of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
+  assert.ok((await readFile(path, 'utf8')).length > 20, 'Missing public SEO/accessibility asset: ' + path);
+}
+assert.ok(html.includes('the best chapter in the universe'), 'Chapter quote was not updated');
+assert.ok(!html.includes('Redruth,_Cornwall'), 'Unrelated illustrative photo must not appear');
+assert.ok(html.includes('align-self:center;margin:0 0 0 8px'), 'Desktop header CTA alignment missing');
 assert.equal(config.name, 'wolvesey-chapter');
 assert.equal(config.assets.directory, './dist');
 assert.match(await readFile('scripts/build.mjs', 'utf8'), /dist\/health\.txt/);

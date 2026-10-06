@@ -29,4 +29,9 @@ jobs:
         run: |
           test -s dist/index.html
           cmp index.html dist/index.html
+          test -s dist/privacy.html
+          test -s dist/accessibility.html
+          test -s dist/sitemap.xml
+          test -s dist/robots.txt
+          test -s dist/favicon.svg
           grep -Fx 'ok: wolvesey-chapter' dist/health.txt
