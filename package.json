@@ -1,0 +1,15 @@
+{
+  "name": "wolvesey-chapter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wolvesey Chapter No. 6818 public website",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.102.0"
+  }
+}
