@@ -21,9 +21,9 @@ assert.ok((await readFile('assets/wolvesey-companion-bw.png')).length > 100000, 
 assert.ok(html.includes('object-fit:contain;object-position:center;filter:grayscale(100%)'), 'Chapter photo should not be cropped or shown in colour');
 assert.ok(!html.includes('meetings__brand-art'), 'Outdated placeholder still present');
 const logo = await readFile('assets/royal-arch-logo.svg', 'utf8');
-assert.match(logo, /<svg[\\s\\S]*<\\/svg>/, 'Uploaded Royal Arch logo must be valid SVG text');
+assert.ok(logo.includes('<svg') && logo.includes('</svg>'), 'Uploaded Royal Arch logo must be valid SVG text');
 assert.ok(html.includes('src="/assets/royal-arch-logo.svg"'), 'Homepage must reference the official Royal Arch logo');
-assert.equal((html.match(/src="/assets/royal-arch-logo\.svg"/g) || []).length, 4, 'Use the official logo in both mastheads, quicklink and watermark');
+assert.equal(html.split('src="/assets/royal-arch-logo.svg"').length - 1, 4, 'Use the official logo in both mastheads, quicklink and watermark');
 assert.ok(!html.includes('#ra-mark'), 'No legacy logo artwork should remain');
 assert.equal(await readFile('favicon.svg', 'utf8'), logo, 'Favicon must match the Chapter logo');
 assert.equal(config.name, 'wolvesey-chapter');
