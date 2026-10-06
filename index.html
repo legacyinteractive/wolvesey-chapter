@@ -44,7 +44,7 @@
     .masthead__inner{display:flex;align-items:center;min-height:112px;gap:22px}
     .brand{display:flex;align-items:center;gap:16px;min-width:278px;flex-shrink:0}
     .brand__text{display:flex;flex-direction:column;justify-content:center;min-width:0}
-    .brand__symbol{width:58px;height:58px;flex:0 0 58px;color:var(--red-bright)}
+    .brand__symbol{display:block;width:58px;height:58px;flex:0 0 58px;object-fit:contain}
     .brand__name{display:block;font:normal 1.55rem/1.02 var(--display);letter-spacing:-.025em;white-space:nowrap}
     .brand__name span{display:block}
     .brand__strap{display:block;margin-top:10px;font-size:.56rem;line-height:1.55;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#bcb9b9}
@@ -65,10 +65,10 @@
     .hero h1{font:normal clamp(5.2rem,8.6vw,9rem)/.89 var(--display);letter-spacing:-.06em;margin:0 0 29px}
     .hero__sub{font:normal clamp(1.2rem,1.65vw,1.68rem)/1.38 var(--display);max-width:390px;margin:0 0 30px;color:#f3f1ef}
     .hero__actions{display:flex;align-items:center;flex-wrap:wrap;gap:24px}
-    .hero__watermark{position:absolute;z-index:0;width:min(32vw,410px);right:18%;top:30%;color:#fff;opacity:.05;pointer-events:none}
+    .hero__watermark{position:absolute;z-index:0;width:min(32vw,410px);height:auto;right:18%;top:30%;opacity:.045;pointer-events:none;filter:grayscale(100%)}
     .mosaic{display:grid;grid-template-columns:23% 43% 34%;min-height:271px}
     .mosaic__principles{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:38px clamp(22px,3vw,52px);background:linear-gradient(120deg,#b60c2a,var(--wine))}
-    .mosaic__principles::after{content:"△";position:absolute;top:2px;left:28px;color:rgba(255,255,255,.10);font:10rem/.9 Georgia,serif}
+    .mosaic__principles::after{content:"";position:absolute;top:8px;left:18px;width:150px;height:150px;opacity:.11;background:url("/assets/royal-arch-logo.svg") center/contain no-repeat;pointer-events:none}
     .mosaic__principles p{font:normal clamp(1.9rem,2.5vw,3rem)/1.08 var(--display);margin:0;z-index:1}
     .mosaic__city{overflow:hidden;background:#333}
     .mosaic__city img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.12);transition:transform .5s ease}
@@ -81,7 +81,7 @@
     .quicklink{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:49px 26px 42px;min-height:275px;border-right:1px solid #e5e1de;transition:background .22s ease}
     .quicklink:first-child{border-left:1px solid #e5e1de}
     .quicklink:hover{background:#f3edf0}
-    .quicklink__icon{display:block;width:37px;height:37px;margin-bottom:21px;color:var(--red)}
+    .quicklink__icon{display:block;width:37px;height:37px;object-fit:contain;margin-bottom:21px;color:var(--red)}
     .quicklink h3{font:normal 1.55rem/1.06 var(--display);margin-bottom:12px}
     .quicklink p{font-size:.8rem;line-height:1.7;max-width:215px;margin-bottom:14px;color:#696364}
     .quicklink__arrow{margin-top:auto;color:var(--red);font-weight:700;font-size:1.35rem}
@@ -129,7 +129,7 @@
     .update-card a{margin-top:auto;display:inline-flex;gap:12px;align-items:center;color:var(--wine);font-size:.8rem;font-weight:700;border-bottom:1px solid #be9aa1;padding-bottom:5px}
     .update-card a:hover{color:#d31536}
     .visit{position:relative;overflow:hidden;background:linear-gradient(113deg,#95061c,#be102b 70%,#840319);padding:92px 0}
-    .visit::after{content:"△";position:absolute;right:4%;top:-180px;font:normal 36rem Georgia,serif;color:rgba(255,255,255,.06);pointer-events:none}
+    .visit::after{content:"";position:absolute;right:4%;top:-130px;width:min(55vw,550px);height:550px;opacity:.07;background:url("/assets/royal-arch-logo.svg") center/contain no-repeat;pointer-events:none}
     .visit__grid{display:grid;grid-template-columns:1fr auto;align-items:center;gap:50px;position:relative;z-index:1}
     .visit .eyebrow{color:#f7adb9}
     .visit h2{font:normal clamp(2.8rem,4.6vw,5.3rem)/1.02 var(--display);margin:10px 0 15px}
@@ -249,16 +249,11 @@
     @media(max-width:360px){.hero h1{font-size:4.2rem}.brand__name{font-size:1.08rem}.quicklink h3{font-size:1.18rem}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter","name":"Wolvesey Chapter No. 6818","description":"A Royal Arch Chapter of Freemasons meeting in Winchester, Hampshire, England.","url":"https://wolvesey-chapter.jack-576.workers.dev/","address":{"@type":"PostalAddress","addressLocality":"Winchester","addressRegion":"Hampshire","addressCountry":"GB"},"sameAs":["https://x.com/wolveseycomp","https://www.facebook.com/share/19yYhRCYd8/"]},{"@type":"WebSite","@id":"https://wolvesey-chapter.jack-576.workers.dev/#website","url":"https://wolvesey-chapter.jack-576.workers.dev/","name":"Wolvesey Chapter No. 6818","inLanguage":"en-GB","publisher":{"@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter","name":"Wolvesey Chapter No. 6818","description":"A Royal Arch Chapter of Freemasons meeting in Winchester, Hampshire, England.","url":"https://wolvesey-chapter.jack-576.workers.dev/","address":{"@type":"PostalAddress","addressLocality":"Winchester","addressRegion":"Hampshire","addressCountry":"GB"},"sameAs":["https://x.com/wolveseycomp","https://www.facebook.com/share/19yYhRCYd8/"],"logo":{"@type":"ImageObject","url":"https://wolvesey-chapter.jack-576.workers.dev/assets/royal-arch-logo.svg","width":800,"height":800}},{"@type":"WebSite","@id":"https://wolvesey-chapter.jack-576.workers.dev/#website","url":"https://wolvesey-chapter.jack-576.workers.dev/","name":"Wolvesey Chapter No. 6818","inLanguage":"en-GB","publisher":{"@id":"https://wolvesey-chapter.jack-576.workers.dev/#chapter"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
-  <symbol id="ra-mark" viewBox="0 0 80 80">
-    <circle cx="40" cy="40" r="34" fill="none" stroke="currentColor" stroke-width="3"/>
-    <path d="M40 11 15 59h50L40 11Zm0 13-18 35h36L40 24Z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
-    <path d="M40 26v26m-13-15h26M32 51h16M31 29h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-  </symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="book" viewBox="0 0 32 32"><path d="M16 6C12 3 7 3 3 5v21c4-2 9-2 13 1 4-3 9-3 13-1V5c-4-2-9-2-13 1Zm0 0v21M7 10h5M20 10h5M7 15h5M20 15h5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
   <symbol id="chapter" viewBox="0 0 32 32"><path d="M4 12 16 4l12 8M7 12v14h18V12M4 27h24M12 26v-9h8v9M10 12h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -269,7 +264,7 @@
 <header class="masthead">
   <div class="masthead__inner shell">
     <a class="brand" href="#home" aria-label="Wolvesey Chapter No. 6818, home">
-      <svg class="brand__symbol" aria-hidden="true"><use href="#ra-mark"/></svg>
+      <img class="brand__symbol" src="/assets/royal-arch-logo.svg" width="58" height="58" alt="" aria-hidden="true" decoding="async">
       <span class="brand__text">
         <span class="brand__name"><span>Wolvesey Chapter</span><span>No. 6818</span></span>
         <span class="brand__strap">Royal Arch Freemasons<br>Winchester, Hampshire</span>
@@ -293,7 +288,7 @@
 <main id="content">
   <section class="hero" id="home" aria-labelledby="main-heading">
     <img class="hero__photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Winchester_Cathedral,_nave_looking_east.jpg?width=1600" alt="" fetchpriority="high">
-    <svg class="hero__watermark" aria-hidden="true" viewBox="0 0 80 80"><use href="#ra-mark"/></svg>
+    <img class="hero__watermark" src="/assets/royal-arch-logo.svg" width="410" height="410" alt="" aria-hidden="true" decoding="async">
     <div class="shell hero__inner">
       <div class="hero__copy">
         <p class="eyebrow">Royal Arch Freemasons</p>
@@ -321,7 +316,7 @@
 
   <section class="quicklinks" aria-label="Explore Wolvesey Chapter">
     <div class="quicklinks__grid shell">
-      <a class="quicklink" href="#royal-arch"><svg class="quicklink__icon" aria-hidden="true"><use href="#ra-mark"/></svg><h3>Discover the<br>Royal Arch</h3><p>Explore its history, meaning and continuing relevance.</p><span class="quicklink__arrow" aria-hidden="true">→</span></a>
+      <a class="quicklink" href="#royal-arch"><img class="quicklink__icon" src="/assets/royal-arch-logo.svg" width="37" height="37" alt="" aria-hidden="true" decoding="async"><h3>Discover the<br>Royal Arch</h3><p>Explore its history, meaning and continuing relevance.</p><span class="quicklink__arrow" aria-hidden="true">→</span></a>
       <a class="quicklink" href="#our-chapter"><svg class="quicklink__icon" aria-hidden="true"><use href="#chapter"/></svg><h3>About<br>Our Chapter</h3><p>Our story, our purpose and our place in Winchester.</p><span class="quicklink__arrow" aria-hidden="true">→</span></a>
       <a class="quicklink" href="#meetings"><svg class="quicklink__icon" aria-hidden="true"><use href="#calendar"/></svg><h3>News &amp;<br>Events</h3><p>Chapter meeting dates and the latest updates.</p><span class="quicklink__arrow" aria-hidden="true">→</span></a>
       <button class="quicklink" type="button" data-members-open><svg class="quicklink__icon" aria-hidden="true"><use href="#person"/></svg><h3>Members<br>Area</h3><p>Private information and resources for Companions.</p><span class="quicklink__arrow" aria-hidden="true">→</span></button>
@@ -418,7 +413,7 @@
     <div class="footer__main">
       <div class="footer__identity">
         <a class="brand" href="#home" aria-label="Wolvesey Chapter No. 6818 — return to homepage">
-          <svg class="brand__symbol" aria-hidden="true"><use href="#ra-mark"/></svg>
+          <img class="brand__symbol" src="/assets/royal-arch-logo.svg" width="58" height="58" alt="" aria-hidden="true" decoding="async">
           <span class="brand__text"><span class="brand__name"><span>Wolvesey Chapter</span><span>No. 6818</span></span><span class="brand__strap">Royal Arch Freemasons<br>Winchester, Hampshire</span></span>
         </a>
         <p>Wolvesey Chapter No. 6818 is a Royal Arch Chapter in Winchester, Hampshire, bringing Companions together in friendship and the continuing journey of Freemasonry.</p>

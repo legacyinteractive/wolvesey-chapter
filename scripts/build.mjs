@@ -9,5 +9,6 @@ for (const asset of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitema
 }
 await mkdir('dist/assets', { recursive: true });
 await cp('assets/wolvesey-companion-bw.png', 'dist/assets/wolvesey-companion-bw.png');
+await cp('assets/royal-arch-logo.svg', 'dist/assets/royal-arch-logo.svg');
 await writeFile('dist/health.txt', 'ok: wolvesey-chapter\n', 'utf8');
 console.log('Built dist/index.html for Cloudflare Workers.');
