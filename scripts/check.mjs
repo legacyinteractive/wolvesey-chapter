@@ -16,8 +16,9 @@ for (const path of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap
 assert.ok(html.includes('the best chapter in the universe'), 'Chapter quote was not updated');
 assert.ok(!html.includes('Redruth,_Cornwall'), 'Unrelated illustrative photo must not appear');
 assert.ok(html.includes('align-self:center;margin:0 0 0 8px'), 'Desktop header CTA alignment missing');
-assert.ok(html.includes('src="/assets/wolvesey-companions.avif"'), 'Approved Chapter image must appear on homepage');
-assert.ok((await readFile('assets/wolvesey-companions.avif')).length > 10000, 'Approved photo is missing or empty');
+assert.ok(html.includes('src="/assets/wolvesey-companion-bw.png"'), 'The sharper black-and-white Chapter image must appear on homepage');
+assert.ok((await readFile('assets/wolvesey-companion-bw.png')).length > 100000, 'High-resolution Chapter photo is missing or too small');
+assert.ok(html.includes('object-fit:contain;object-position:center;filter:grayscale(100%)'), 'Chapter photo should not be cropped or shown in colour');
 assert.ok(!html.includes('meetings__brand-art'), 'Outdated placeholder still present');
 assert.equal(config.name, 'wolvesey-chapter');
 assert.equal(config.assets.directory, './dist');

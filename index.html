@@ -87,7 +87,7 @@
     .quicklink__arrow{margin-top:auto;color:var(--red);font-weight:700;font-size:1.35rem}
     .meetings{display:grid;grid-template-columns:1fr 1fr;min-height:550px;scroll-margin-top:100px}
     .meetings__image{position:relative;overflow:hidden;min-height:510px;background:linear-gradient(135deg,#251319,#09090b)}
-    .meetings__image img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.96);position:absolute;inset:0}
+    .meetings__image img{width:100%;height:100%;object-fit:contain;object-position:center;filter:grayscale(100%) contrast(1.06);background:#0c0c0e;position:absolute;inset:0}
     .meetings__image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.12),transparent 35%);pointer-events:none}
     .photo-note{position:absolute;bottom:14px;left:22px;z-index:1;color:#fff9;font-size:.64rem;background:#08080894;padding:7px 10px}
     .meetings__content{padding:65px clamp(35px,6.4vw,108px) 58px;background:#111113;display:flex;flex-direction:column;justify-content:center}
@@ -330,7 +330,7 @@
 
   <section class="meetings" id="meetings" aria-labelledby="meetings-heading">
     <div class="meetings__image">
-      <img src="/assets/wolvesey-companions.avif" width="450" height="338" loading="lazy" decoding="async" alt="Group photograph of Royal Arch Companions in ceremonial regalia">
+      <img src="/assets/wolvesey-companion-bw.png" width="1536" height="1024" loading="lazy" decoding="async" alt="Wolvesey Chapter Royal Arch Companions in ceremonial regalia, photographed together in black and white">
     </div>
     <div class="meetings__content">
       <p class="eyebrow">Gathering in Winchester</p>

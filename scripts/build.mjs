@@ -8,6 +8,6 @@ for (const asset of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitema
   await cp(asset, 'dist/' + asset);
 }
 await mkdir('dist/assets', { recursive: true });
-await cp('assets/wolvesey-companions.avif', 'dist/assets/wolvesey-companions.avif');
+await cp('assets/wolvesey-companion-bw.png', 'dist/assets/wolvesey-companion-bw.png');
 await writeFile('dist/health.txt', 'ok: wolvesey-chapter\n', 'utf8');
 console.log('Built dist/index.html for Cloudflare Workers.');

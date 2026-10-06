@@ -42,4 +42,6 @@ After a successful deployment, open `/health.txt` on the Worker domain. A respon
 
 ## Homepage polish (October 2026)
 
-Navigation and brand alignment, footer structure, privacy and accessibility pages, SEO metadata, sitemap, and favicon are included. The unrelated Cornwall regalia image has been removed and replaced with the user-supplied Chapter photograph. **The user-supplied Wolvesey Chapter group photograph is stored as a locally hosted AVIF asset and included in the Cloudflare deployment**; social share URLs are not stable image URLs. The Workers development hostname is the current canonical URL: update canonical and sitemap together when the permanent domain is chosen.
+Navigation and brand alignment, footer structure, privacy and accessibility pages, SEO metadata, sitemap, and favicon are included. The unrelated Cornwall regalia image has been removed and replaced with the user-supplied Chapter photograph. **The user-supplied higher-resolution black-and-white Wolvesey Chapter group photograph is now hosted as `assets/wolvesey-companion-bw.png` and included in the Cloudflare deployment**; social share URLs are not stable image URLs. The Workers development hostname is the current canonical URL: update canonical and sitemap together when the permanent domain is chosen.
+
+The black-and-white Chapter photo uses `object-fit: contain` to prevent heads being cropped at different screen widths.
