@@ -12,4 +12,5 @@ for (const id of ['content','home','our-chapter','royal-arch','news','meetings',
 assert.ok(html.includes('The private Chapter area is being prepared.'), 'Members area must not claim working authentication');
 assert.equal(config.name, 'wolvesey-chapter');
 assert.equal(config.assets.directory, './dist');
+assert.match(await readFile('scripts/build.mjs', 'utf8'), /dist\/health\.txt/);
 console.log('Wolvesey Chapter source and Wrangler configuration checks passed.');

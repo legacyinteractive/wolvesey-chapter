@@ -35,3 +35,7 @@ For a manual production deploy with your Cloudflare credentials available, run `
 - **Members Area** is an explicitly disabled placeholder. Never publish private Chapter documents via the public static assets directory.
 - Current hero and supporting images are external Wikimedia Commons references; replace these with approved, locally stored Chapter imagery before public launch.
 - For a formal contact channel, replace the social-media links with the official Chapter Secretary contact information after approval.
+
+### Deployment health check
+
+After a successful deployment, open `/health.txt` on the Worker domain. A response of `ok: wolvesey-chapter` confirms the updated static assets are being served. This endpoint does not check external image hosts or private authentication.
