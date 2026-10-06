@@ -1,0 +1,31 @@
+name: Verify Wolvesey Chapter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify public site
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate site and Cloudflare configuration
+        run: npm run check
+      - name: Build Cloudflare static assets
+        run: npm run build
+      - name: Confirm deployment assets
+        run: |
+          test -s dist/index.html
+          cmp index.html dist/index.html
