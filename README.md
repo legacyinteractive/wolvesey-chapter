@@ -49,3 +49,7 @@ The black-and-white Chapter photo uses `object-fit: contain` to prevent heads be
 ## Royal Arch branding
 
 The source logo uploaded as `assets/royal-arch-logo.png` is actually SVG (XML), not PNG. Use `assets/royal-arch-logo.svg` everywhere; `favicon.svg` mirrors the same original uploaded vector without redraw. The Cloudflare build copies the SVG into its asset directory, and the verification workflow checks both copies stay identical.
+
+## October demo polish
+
+The public demo banner is consistent on the homepage, accessibility, and privacy pages. Typography and mobile navigation were refined without introducing a members login. GitHub CI checks the banner, mobile spacing, social preview image and absence of obsolete footer rules. Review third-party image availability, exact meeting details, and any required privacy wording before announcing a public launch.

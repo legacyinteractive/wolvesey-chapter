@@ -23,6 +23,15 @@ assert.ok(html.includes('.quicklink__arrow{margin-top:auto;color:#9b0b27'), 'Qui
 assert.ok(!html.includes('A Chapter in the<br>heart of Winchester.'), 'Previous Chapter headline must be removed');
 assert.ok(html.includes('class="demo-banner"') && html.includes('Website demo — concept only'), 'Public concept-only preview banner must be visible');
 assert.ok(html.includes('Website built by <a href="https://legacyinteractive.co.uk/"'), 'Legacy Interactive footer credit missing');
+assert.match(html, /<meta property="og:image" content="https:\/\/wolvesey-chapter\.jack-576\.workers\.dev\/assets\/wolvesey-companion-bw\.png">/, 'Social share image missing');
+assert.ok(html.includes('scroll-padding-top:24px'), 'On-page links need sensible anchor offsets');
+assert.ok(html.includes('font-size:.56rem;margin-top:5px'), 'Mobile brand label readability regression');
+assert.ok(html.includes('window.addEventListener("resize"'), 'Mobile navigation should close when entering desktop layout');
+assert.ok(!html.includes('.footer__top{'), 'Obsolete footer styling should be removed');
+for(const page of ['privacy.html','accessibility.html']){
+  const legalHtml = await readFile(page,'utf8');
+  assert.ok(legalHtml.includes('Website demo — concept only'), 'Preview label missing from '+page);
+}
 assert.ok(!html.includes('Redruth,_Cornwall'), 'Unrelated illustrative photo must not appear');
 assert.ok(html.includes('align-self:center;margin:0 0 0 8px'), 'Desktop header CTA alignment missing');
 assert.ok(html.includes('src="/assets/wolvesey-companion-bw.png"'), 'The sharper black-and-white Chapter image must appear on homepage');
