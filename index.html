@@ -40,6 +40,7 @@
     .btn--light:hover{background:#f6e5e8}
     .text-link{display:inline-flex;align-items:center;gap:12px;font-size:.84rem;font-weight:700;line-height:1.5;border-bottom:1px solid rgba(255,255,255,.42);padding-bottom:7px;transition:gap .2s ease}
     .text-link:hover{gap:19px}
+    .demo-banner{display:flex;align-items:center;justify-content:center;min-height:36px;padding:10px 18px;background:#791329;color:#fff;font-size:.67rem;font-weight:700;letter-spacing:.18em;line-height:1.5;text-align:center;text-transform:uppercase}
     .masthead{position:relative;z-index:20;background:var(--ink);border-top:4px solid var(--red);border-bottom:1px solid var(--line)}
     .masthead__inner{display:flex;align-items:center;min-height:112px;gap:22px}
     .brand{display:flex;align-items:center;gap:16px;min-width:278px;flex-shrink:0}
@@ -105,6 +106,7 @@
     .story{padding:108px 0;background:var(--ivory);color:var(--ink)}
     .story__grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:min(12vw,180px)}
     .story .section-head p{color:#5e5859}
+    .story .section-head h2{text-wrap:balance;overflow-wrap:break-word}
     .story__body p{line-height:1.9;font-size:.92rem;color:#514b4b}
     .story__body .btn{margin-top:15px}
     .story__quote{padding:53px 55px;background:#eae5df;border-left:4px solid var(--red);position:relative}
@@ -156,6 +158,8 @@
     .footer__column>a:hover{text-decoration:underline;color:#fff}
     .footer__column p{font-size:.77rem;line-height:1.75;color:#a8a0a2;margin:9px 0 0}
     .footer__bottom{display:flex;justify-content:space-between;gap:20px;padding:27px 0 0;color:#bab3b6;font-size:.72rem;line-height:1.65}
+    .footer__bottom a{color:#f2dfe3;text-decoration:underline;text-underline-offset:3px}
+    .footer__bottom a:hover{color:#ff8ca1}
     .footer__credits{margin-top:19px;color:#8e8589;font-size:.64rem;line-height:1.7}
     .footer__credits a{text-decoration:underline;text-underline-offset:3px}
     @media(max-width:1080px){.footer__main{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:42px}}
@@ -261,6 +265,8 @@
   <symbol id="person" viewBox="0 0 32 32"><circle cx="16" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 28v-4c0-6 4-9 11-9s11 3 11 9v4H5Z" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
 </svg>
 
+<div class="demo-banner" role="note" aria-label="Website preview notice">Website demo — concept only</div>
+
 <header class="masthead">
   <div class="masthead__inner shell">
     <a class="brand" href="#home" aria-label="Wolvesey Chapter No. 6818, home">
@@ -343,7 +349,7 @@
       <div class="story__body">
         <div class="section-head">
           <p class="eyebrow">Our Chapter</p>
-          <h2 id="story-heading">A Chapter in the<br>heart of Winchester.</h2>
+          <h2 id="story-heading">The Next Step in Your Masonic Journey.</h2>
           <p>Tradition, companionship and discovery in one of England’s most historic cities.</p>
         </div>
         <p>Wolvesey Chapter No. 6818 brings together Royal Arch Freemasons, known as Companions, to continue the journey begun in the Craft. The Chapter is part of the Hampshire &amp; Isle of Wight Royal Arch community.</p>
@@ -446,7 +452,7 @@
     </div>
     <div class="footer__bottom">
       <span>© <span id="year">2026</span> Wolvesey Chapter No. 6818. All rights reserved.</span>
-      <span>Royal Arch Freemasonry · Winchester · Hampshire · United Kingdom</span>
+      <span>Website built by <a href="https://legacyinteractive.co.uk/" target="_blank" rel="noopener noreferrer">Legacy Interactive</a></span>
     </div>
     <div class="footer__credits">Image credits: <a href="https://commons.wikimedia.org/wiki/File:Winchester_Cathedral,_nave_looking_east.jpg" target="_blank" rel="noopener noreferrer">Winchester Cathedral (Poliphilo, CC0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Winchester_High_Street_(2).jpg" target="_blank" rel="noopener noreferrer">Winchester High Street (Shlumble, CC0)</a>.</div>
   </div>

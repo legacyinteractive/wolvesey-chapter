@@ -14,6 +14,10 @@ for (const path of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap
   assert.ok((await readFile(path, 'utf8')).length > 20, 'Missing public SEO/accessibility asset: ' + path);
 }
 assert.ok(html.includes('the best chapter in the universe'), 'Chapter quote was not updated');
+assert.ok(html.includes('The Next Step in Your Masonic Journey.'), 'Chapter headline must be distinct from Lodge site');
+assert.ok(!html.includes('A Chapter in the<br>heart of Winchester.'), 'Previous Chapter headline must be removed');
+assert.ok(html.includes('class="demo-banner"') && html.includes('Website demo — concept only'), 'Public concept-only preview banner must be visible');
+assert.ok(html.includes('Website built by <a href="https://legacyinteractive.co.uk/"'), 'Legacy Interactive footer credit missing');
 assert.ok(!html.includes('Redruth,_Cornwall'), 'Unrelated illustrative photo must not appear');
 assert.ok(html.includes('align-self:center;margin:0 0 0 8px'), 'Desktop header CTA alignment missing');
 assert.ok(html.includes('src="/assets/wolvesey-companion-bw.png"'), 'The sharper black-and-white Chapter image must appear on homepage');
