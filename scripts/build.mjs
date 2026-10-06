@@ -7,5 +7,7 @@ await cp('index.html', 'dist/index.html');
 for (const asset of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
   await cp(asset, 'dist/' + asset);
 }
+await mkdir('dist/assets', { recursive: true });
+await cp('assets/wolvesey-companions.avif', 'dist/assets/wolvesey-companions.avif');
 await writeFile('dist/health.txt', 'ok: wolvesey-chapter\n', 'utf8');
 console.log('Built dist/index.html for Cloudflare Workers.');

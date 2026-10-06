@@ -34,4 +34,5 @@ jobs:
           test -s dist/sitemap.xml
           test -s dist/robots.txt
           test -s dist/favicon.svg
+          test -s dist/assets/wolvesey-companions.avif
           grep -Fx 'ok: wolvesey-chapter' dist/health.txt

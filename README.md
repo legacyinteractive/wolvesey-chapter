@@ -33,7 +33,7 @@ For a manual production deploy with your Cloudflare credentials available, run `
 
 - Meetings are **indicative dates calculated** from the second-Wednesday meeting pattern. Check the summons for any changes, location, or time.
 - **Members Area** is an explicitly disabled placeholder. Never publish private Chapter documents via the public static assets directory.
-- Current hero and supporting images are external Wikimedia Commons references; replace these with approved, locally stored Chapter imagery before public launch.
+- The meeting image is a locally hosted user-supplied Chapter photograph. Other illustrative Winchester images are Wikimedia Commons references; confirm and replace these where appropriate before public launch.
 - For a formal contact channel, replace the social-media links with the official Chapter Secretary contact information after approval.
 
 ### Deployment health check
@@ -42,4 +42,4 @@ After a successful deployment, open `/health.txt` on the Worker domain. A respon
 
 ## Homepage polish (October 2026)
 
-Navigation and brand alignment, footer structure, privacy and accessibility pages, SEO metadata, sitemap, and favicon are included. The unrelated Cornwall regalia image has been removed. **A genuine Wolvesey Chapter Facebook photograph must be supplied and checked for permission to reuse before insertion**; social share URLs are not stable image URLs. The Workers development hostname is the current canonical URL: update canonical and sitemap together when the permanent domain is chosen.
+Navigation and brand alignment, footer structure, privacy and accessibility pages, SEO metadata, sitemap, and favicon are included. The unrelated Cornwall regalia image has been removed and replaced with the user-supplied Chapter photograph. **The user-supplied Wolvesey Chapter group photograph is stored as a locally hosted AVIF asset and included in the Cloudflare deployment**; social share URLs are not stable image URLs. The Workers development hostname is the current canonical URL: update canonical and sitemap together when the permanent domain is chosen.

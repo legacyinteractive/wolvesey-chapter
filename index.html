@@ -87,12 +87,8 @@
     .quicklink__arrow{margin-top:auto;color:var(--red);font-weight:700;font-size:1.35rem}
     .meetings{display:grid;grid-template-columns:1fr 1fr;min-height:550px;scroll-margin-top:100px}
     .meetings__image{position:relative;overflow:hidden;min-height:510px;background:linear-gradient(135deg,#251319,#09090b)}
-    .meetings__image img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.78);position:absolute;inset:0}
-    .meetings__image::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,transparent,rgba(0,0,0,.56) 85%);pointer-events:none}
-    .meetings__brand-art{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;text-align:center;background:radial-gradient(circle at 52% 38%,#7a1228 0%,#230a10 45%,#09090b 89%);padding:35px;color:#fff}
-    .meetings__brand-art svg{width:132px;max-width:35%;height:auto;color:#ef3e59;margin-bottom:12px;filter:drop-shadow(0 12px 28px #0009)}
-    .meetings__brand-art strong{font:normal clamp(3.2rem,5.5vw,6rem)/.86 var(--display);letter-spacing:-.045em}
-    .meetings__brand-art>span:last-child{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:#e9a5b1}
+    .meetings__image img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.96);position:absolute;inset:0}
+    .meetings__image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.12),transparent 35%);pointer-events:none}
     .photo-note{position:absolute;bottom:14px;left:22px;z-index:1;color:#fff9;font-size:.64rem;background:#08080894;padding:7px 10px}
     .meetings__content{padding:65px clamp(35px,6.4vw,108px) 58px;background:#111113;display:flex;flex-direction:column;justify-content:center}
     .meetings__content h2{font:normal clamp(2.2rem,3.4vw,3.7rem)/1.05 var(--display);margin:12px 0 29px}
@@ -334,12 +330,7 @@
 
   <section class="meetings" id="meetings" aria-labelledby="meetings-heading">
     <div class="meetings__image">
-      <div class="meetings__brand-art" role="img" aria-label="Wolvesey Chapter Royal Arch branding, awaiting an approved photograph from the Chapter">
-        <svg aria-hidden="true" viewBox="0 0 80 80"><use href="#ra-mark"/></svg>
-        <span class="eyebrow">Winchester · Hampshire</span>
-        <strong>Wolvesey<br>Chapter</strong>
-        <span>No. 6818 · Royal Arch Freemasons</span>
-      </div>
+      <img src="/assets/wolvesey-companions.avif" width="450" height="338" loading="lazy" decoding="async" alt="Group photograph of Royal Arch Companions in ceremonial regalia">
     </div>
     <div class="meetings__content">
       <p class="eyebrow">Gathering in Winchester</p>
