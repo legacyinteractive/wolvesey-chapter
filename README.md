@@ -53,3 +53,7 @@ The source logo uploaded as `assets/royal-arch-logo.png` is actually SVG (XML), 
 ## October demo polish
 
 The public demo banner is consistent on the homepage, accessibility, and privacy pages. Typography and mobile navigation were refined without introducing a members login. GitHub CI checks the banner, mobile spacing, social preview image and absence of obsolete footer rules. Review third-party image availability, exact meeting details, and any required privacy wording before announcing a public launch.
+
+## Visitor information and calendar reminders
+
+The homepage now offers accessible visitor and Royal Arch joining information, grounded in UGLE and Provincial listings. The Winchester Masonic Centre address is identified as a directory-recorded venue, **not a substitute for the summons**. Indicative meeting dates can be saved as a date-only, transparent, tentative calendar file generated in the browser; no user information is sent or stored. Members-only content remains disabled.

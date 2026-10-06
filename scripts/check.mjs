@@ -1,9 +1,13 @@
 import { readFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import { Script } from 'node:vm';
 
 const html = await readFile('index.html', 'utf8');
 const config = JSON.parse(await readFile('wrangler.jsonc', 'utf8'));
 assert.match(html, /^<!doctype html>/i);
+const pageScript=html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+assert.ok(pageScript, 'Missing interactive page script');
+new Script(pageScript, { filename: 'Wolvesey inline script' });
 assert.match(html, /<title>Wolvesey Chapter No\. 6818/);
 assert.match(html, /<meta name="viewport"/);
 for (const id of ['content','home','our-chapter','royal-arch','news','meetings','visit','contact','members-dialog']) {
@@ -28,6 +32,11 @@ assert.ok(html.includes('scroll-padding-top:24px'), 'On-page links need sensible
 assert.ok(html.includes('font-size:.56rem;margin-top:5px'), 'Mobile brand label readability regression');
 assert.ok(html.includes('window.addEventListener("resize"'), 'Mobile navigation should close when entering desktop layout');
 assert.ok(!html.includes('.footer__top{'), 'Obsolete footer styling should be removed');
+assert.ok(html.includes('id="joining"') && html.includes('href="#joining"'), 'Joining pathway should be reachable');
+assert.ok(html.includes('at least four weeks'), 'Royal Arch eligibility information missing');
+assert.ok(html.includes('124 Alresford Road') && html.includes('Confirm before travel'), 'Recorded venue needs qualification');
+assert.ok(html.includes('id="calendar-download"') && html.includes('STATUS:TENTATIVE'), 'Indicative meeting reminders missing');
+assert.ok(html.includes('second Wednesday in February, May, October'), 'Provincial meeting pattern absent');
 for(const page of ['privacy.html','accessibility.html']){
   const legalHtml = await readFile(page,'utf8');
   assert.ok(legalHtml.includes('Website demo — concept only'), 'Preview label missing from '+page);
