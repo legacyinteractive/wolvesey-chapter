@@ -108,18 +108,18 @@
     .meeting p{margin:4px 0 0;color:#c5bbbf;font-size:.84rem}
     .note{font-size:.81rem;color:#c5bfc1;line-height:1.7;margin:26px 0 21px}
     .section-head{margin-bottom:38px}
-    .section-head h2{font:normal clamp(2.7rem,4vw,4.9rem)/.98 var(--display);letter-spacing:-.035em;margin:11px 0 14px}
+    .section-head h2{font:normal clamp(2.7rem,4vw,4.9rem)/1.04 var(--display);letter-spacing:-.035em;margin:11px 0 16px;text-wrap:balance}
     .section-head p{max-width:610px;color:#aaa7a7;line-height:1.8;font-size:.92rem}
     .story{padding:108px 0;background:var(--ivory);color:var(--ink)}
-    .story__grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:min(12vw,180px)}
+    .story__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(32px,6vw,112px)}
     .story .section-head p{color:#5e5859}
     .story .section-head h2{text-wrap:balance;overflow-wrap:break-word}
-    .story__body p{line-height:1.9;font-size:.92rem;color:#514b4b}
+    .story__body p{line-height:1.85;font-size:.95rem;color:#433b40;max-width:65ch}
     .story__body .btn{margin-top:15px}
-    .story__quote{padding:53px 55px;background:#eae5df;border-left:4px solid var(--red);position:relative}
-    .story__quote::before{content:"“";position:absolute;top:-21px;left:25px;font:9rem Georgia,serif;color:#cdbec2}
-    .story__quote p{position:relative;font:normal clamp(2.2rem,3.5vw,4.4rem)/1.04 var(--display);letter-spacing:-.02em;margin-bottom:25px}
-    .story__quote span{display:block;font-size:.74rem;letter-spacing:.17em;font-weight:700;text-transform:uppercase;color:var(--wine)}
+    .story__quote{padding:clamp(35px,4.4vw,58px);background:#efe8e8;border-left:5px solid #a20e2a;position:relative;isolation:isolate;min-width:0;box-shadow:0 22px 55px rgba(40,17,24,.07)}
+    .story__quote::before{content:"“";position:absolute;top:-20px;left:20px;font:9rem Georgia,serif;color:#d9bfc5;z-index:-1}
+    .story__quote p{position:relative;font:normal clamp(2.25rem,3.3vw,4.2rem)/1.08 var(--display);letter-spacing:-.023em;color:#1d161a;overflow-wrap:normal;text-wrap:balance;max-width:18ch;margin-bottom:28px}
+    .story__quote span{display:block;font-size:.82rem;letter-spacing:.14em;font-weight:800;text-transform:uppercase;color:#760c23;line-height:1.55}
     .arch{padding:100px 0 113px;background:#18171a;position:relative;overflow:hidden}
     .arch::after{content:"";position:absolute;width:470px;height:470px;right:-180px;top:-210px;border:1px solid rgba(219,30,65,.25);border-radius:50%;box-shadow:0 0 0 90px #bb12330a,0 0 0 180px #bb123306;pointer-events:none}
     .arch__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
@@ -240,6 +240,7 @@
       .update-card{padding:28px 23px}
       .visit__grid{grid-template-columns:1fr}
     }
+    @media(max-width:900px){.story__grid{grid-template-columns:1fr;gap:37px}.story__quote{max-width:650px}}
     @media(max-width:650px){
       .shell{width:min(100% - 36px,1440px)}
       .masthead__inner{min-height:82px;gap:10px}
@@ -270,8 +271,8 @@
       .meetings__content{padding:52px 28px 60px}
       .story,.arch,.updates{padding:75px 0}
       .story__grid,.arch__grid{grid-template-columns:1fr;gap:32px}
-      .story__quote{padding:45px 35px}
-      .story__quote p{font-size:3rem}
+      .story__quote{padding:44px 31px}
+      .story__quote p{font-size:clamp(2.2rem,7.6vw,3.05rem)}
       .arch__panels{gap:10px}
       .arch__panel{min-height:200px;padding:20px 17px}
       .arch__panel span{font-size:3rem;margin-bottom:18px}
@@ -391,7 +392,7 @@
         <a class="btn" href="#joining">Visiting &amp; Enquiries <svg aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
       <aside class="story__quote">
-        <p>the best chapter in the universe</p>
+        <p>the finest chapter in the universe</p>
         <span>Wolvesey Chapter No. 6818</span>
       </aside>
     </div>

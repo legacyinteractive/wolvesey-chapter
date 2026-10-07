@@ -57,3 +57,8 @@ The public demo banner is consistent on the homepage, accessibility, and privacy
 ## Visitor information and calendar reminders
 
 The homepage now offers accessible visitor and Royal Arch joining information, grounded in UGLE and Provincial listings. The Winchester Masonic Centre address is identified as a directory-recorded venue, **not a substitute for the summons**. Indicative meeting dates can be saved as a date-only, transparent, tentative calendar file generated in the browser; no user information is sent or stored. Members-only content remains disabled.
+
+## Batch 1 — quote & typography (2026-10-07)
+- Replaced all visible references to the old quote with **“the finest chapter in the universe”**.
+- Improved quote legibility, line breaks, responsive stacking, paragraph measures, contrast and headline spacing.
+- Static regression assertions added; real-world iPad/iPhone visual sign-off is still required.
