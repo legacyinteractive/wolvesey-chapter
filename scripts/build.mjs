@@ -4,7 +4,7 @@ import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
 await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
 await cp('index.html', 'dist/index.html');
-for (const asset of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
+for (const asset of ['privacy.html', 'accessibility.html', 'review.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
   await cp(asset, 'dist/' + asset);
 }
 await mkdir('dist/assets', { recursive: true });

@@ -14,10 +14,13 @@ for (const id of ['content','home','our-chapter','royal-arch','news','meetings',
   assert.ok(html.includes('id="' + id + '"'), 'Missing anchor: ' + id);
 }
 assert.ok(html.includes('The private Chapter area is being prepared.'), 'Members area must not claim working authentication');
-for (const path of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
+for (const path of ['privacy.html', 'accessibility.html', 'review.html', 'robots.txt', 'sitemap.xml', 'favicon.svg']) {
   assert.ok((await readFile(path, 'utf8')).length > 20, 'Missing public SEO/accessibility asset: ' + path);
 }
 assert.ok(html.includes('the finest chapter in the universe'), 'Chapter quote wording regressed');
+assert.ok(html.includes('opacity:.067;pointer-events:none'), 'Hero watermark should stay subtle');
+assert.ok(html.includes('href="/review.html"'), 'Review banner link missing');
+assert.ok((await readFile('review.html','utf8')).includes('The Members Area is <strong>not active</strong>'), 'Review honesty section missing');
 assert.ok(!html.includes('the best chapter in the universe'), 'Superseded Chapter quote still in source');
 assert.ok(html.includes('.story__quote p{position:relative;font:normal') && html.includes('color:#1d161a'), 'Quote type contrast missing');
 assert.ok(html.includes('.story__grid,.arch__grid{grid-template-columns:1fr;gap:37px}'), 'Quote must stack safely on tablets');
@@ -45,7 +48,7 @@ assert.ok(html.includes('124 Alresford Road') && html.includes('Confirm before t
 assert.ok(html.includes('id="calendar-download"') && html.includes('STATUS:TENTATIVE'), 'Indicative meeting reminders missing');
 assert.ok(html.includes('second Wednesday in February, May, October'), 'Provincial meeting pattern absent');
 assert.ok(html.includes('name="robots" content="noindex, noarchive"'), 'Demo homepage must not be indexed prior to launch approval');
-for(const page of ['privacy.html','accessibility.html']){
+for(const page of ['privacy.html','accessibility.html','review.html']){
   const legalHtml = await readFile(page,'utf8');
   assert.ok(legalHtml.includes('Website demo — concept only'), 'Preview label missing from '+page);
   assert.ok(legalHtml.includes('name="robots" content="noindex, noarchive"'), 'Demo legal pages must remain noindex until authorised release');

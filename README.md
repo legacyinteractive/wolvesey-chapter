@@ -68,3 +68,8 @@ The homepage now offers accessible visitor and Royal Arch joining information, g
 - Hero title scales down on phones (including 320–360px), news and Royal Arch sections reflow on tablets, image presentation no longer artificially exaggerates portrait contrast, and arrows/footer text are clearer.
 - Added `noindex, noarchive` **only while the concept/demo is unauthorised** to homepage, privacy and accessibility pages; this must be deliberately removed alongside demo banner when Chapter approves launch. Keep metadata, structured data, sitemap and canonical prepared but do not treat preview as a released public site.
 - Automated source regression tests added. **Manual live Cloudflare, responsive device and external asset checks remain open in Linear.**
+
+## Concept review preparation (2026-10-07)
+- Hero watermark opacity increased only to 0.067.
+- Public /review.html overview linked from all demo banners. Covers implemented features, provisional content, disabled Members Area, feedback process and production decisions.
+- Review page remains noindex/noarchive and is included in build and CI.
