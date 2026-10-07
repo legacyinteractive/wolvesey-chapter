@@ -62,3 +62,9 @@ The homepage now offers accessible visitor and Royal Arch joining information, g
 - Replaced all visible references to the old quote with **“the finest chapter in the universe”**.
 - Improved quote legibility, line breaks, responsive stacking, paragraph measures, contrast and headline spacing.
 - Static regression assertions added; real-world iPad/iPhone visual sign-off is still required.
+
+## Batch 2 — responsive, image, accessibility and SEO (2026-10-07)
+- The menu converts to mobile before navigation links collide on narrow desktops/tablets (CSS and JS at 1220px).
+- Hero title scales down on phones (including 320–360px), news and Royal Arch sections reflow on tablets, image presentation no longer artificially exaggerates portrait contrast, and arrows/footer text are clearer.
+- Added `noindex, noarchive` **only while the concept/demo is unauthorised** to homepage, privacy and accessibility pages; this must be deliberately removed alongside demo banner when Chapter approves launch. Keep metadata, structured data, sitemap and canonical prepared but do not treat preview as a released public site.
+- Automated source regression tests added. **Manual live Cloudflare, responsive device and external asset checks remain open in Linear.**

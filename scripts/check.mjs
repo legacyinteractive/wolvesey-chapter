@@ -34,15 +34,21 @@ assert.match(html, /<meta property="og:image" content="https:\/\/wolvesey-chapte
 assert.ok(html.includes('scroll-padding-top:24px'), 'On-page links need sensible anchor offsets');
 assert.ok(html.includes('font-size:.56rem;margin-top:5px'), 'Mobile brand label readability regression');
 assert.ok(html.includes('window.addEventListener("resize"'), 'Mobile navigation should close when entering desktop layout');
+assert.ok(html.includes('window.innerWidth>1220'), 'Header nav breakpoint must match JS');
+assert.ok(html.includes('font-size:clamp(3.85rem,12.8vw,6rem)'), 'Mobile hero title should not overflow');
+assert.ok(html.includes('object-fit:contain;object-position:center;filter:grayscale(100%)'), 'Chapter portrait should be full-width monochrome without excess contrast');
+assert.ok(html.includes('grid-template-columns:repeat(2,minmax(0,1fr))'), 'Tablet news cards should not be squeezed');
 assert.ok(!html.includes('.footer__top{'), 'Obsolete footer styling should be removed');
 assert.ok(html.includes('id="joining"') && html.includes('href="#joining"'), 'Joining pathway should be reachable');
 assert.ok(html.includes('at least four weeks'), 'Royal Arch eligibility information missing');
 assert.ok(html.includes('124 Alresford Road') && html.includes('Confirm before travel'), 'Recorded venue needs qualification');
 assert.ok(html.includes('id="calendar-download"') && html.includes('STATUS:TENTATIVE'), 'Indicative meeting reminders missing');
 assert.ok(html.includes('second Wednesday in February, May, October'), 'Provincial meeting pattern absent');
+assert.ok(html.includes('name="robots" content="noindex, noarchive"'), 'Demo homepage must not be indexed prior to launch approval');
 for(const page of ['privacy.html','accessibility.html']){
   const legalHtml = await readFile(page,'utf8');
   assert.ok(legalHtml.includes('Website demo — concept only'), 'Preview label missing from '+page);
+  assert.ok(legalHtml.includes('name="robots" content="noindex, noarchive"'), 'Demo legal pages must remain noindex until authorised release');
 }
 assert.ok(!html.includes('Redruth,_Cornwall'), 'Unrelated illustrative photo must not appear');
 assert.ok(html.includes('align-self:center;margin:0 0 0 8px'), 'Desktop header CTA alignment missing');
