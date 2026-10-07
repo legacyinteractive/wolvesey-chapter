@@ -20,7 +20,7 @@ for (const path of ['privacy.html', 'accessibility.html', 'robots.txt', 'sitemap
 assert.ok(html.includes('the finest chapter in the universe'), 'Chapter quote wording regressed');
 assert.ok(!html.includes('the best chapter in the universe'), 'Superseded Chapter quote still in source');
 assert.ok(html.includes('.story__quote p{position:relative;font:normal') && html.includes('color:#1d161a'), 'Quote type contrast missing');
-assert.ok(html.includes('.story__grid{grid-template-columns:1fr;gap:37px}'), 'Quote must stack safely on tablets');
+assert.ok(html.includes('.story__grid,.arch__grid{grid-template-columns:1fr;gap:37px}'), 'Quote must stack safely on tablets');
 assert.ok(html.includes('The Next Step in Your Masonic Journey.'), 'Chapter headline must be distinct from Lodge site');
 assert.ok(html.includes('button.quicklink{appearance:none'), 'Members card must reset default button appearance');
 assert.ok(html.includes('background:#ebe8e8'), 'Members card should have a readable light-grey default background');
