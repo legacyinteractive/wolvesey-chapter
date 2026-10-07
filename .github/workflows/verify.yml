@@ -23,6 +23,8 @@ jobs:
           node-version: '22'
       - name: Validate site and Cloudflare configuration
         run: npm run check
+      - name: Audit public demo links, images and accessibility references
+        run: node scripts/audit-review.mjs
       - name: Build Cloudflare static assets
         run: npm run build
       - name: Confirm deployment assets

@@ -73,3 +73,8 @@ The homepage now offers accessible visitor and Royal Arch joining information, g
 - Hero watermark opacity increased only to 0.067.
 - Public /review.html overview linked from all demo banners. Covers implemented features, provisional content, disabled Members Area, feedback process and production decisions.
 - Review page remains noindex/noarchive and is included in build and CI.
+
+## Reviewer audit (7 October 2026)
+- GitHub CI now checks internal navigation, linked files, alternative text, ARIA references, duplicate IDs and external-link opener safety with scripts/audit-review.mjs.
+- Review guide now has keyboard skip navigation. Privacy language clarifies third-party technical requests may still be processed; it does not collect feedback through a form.
+- Static tests cannot replace manual responsive/mobile QA, remote link availability or production security review.

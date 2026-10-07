@@ -21,6 +21,7 @@ assert.ok(html.includes('the finest chapter in the universe'), 'Chapter quote wo
 assert.ok(html.includes('opacity:.067;pointer-events:none'), 'Hero watermark should stay subtle');
 assert.ok(html.includes('href="/review.html"'), 'Review banner link missing');
 assert.ok((await readFile('review.html','utf8')).includes('The Members Area is <strong>not active</strong>'), 'Review honesty section missing');
+assert.ok((await readFile('review.html','utf8')).includes('href="#main"'), 'Review skip navigation missing');
 assert.ok(!html.includes('the best chapter in the universe'), 'Superseded Chapter quote still in source');
 assert.ok(html.includes('.story__quote p{position:relative;font:normal') && html.includes('color:#1d161a'), 'Quote type contrast missing');
 assert.ok(html.includes('.story__grid,.arch__grid{grid-template-columns:1fr;gap:37px}'), 'Quote must stack safely on tablets');
