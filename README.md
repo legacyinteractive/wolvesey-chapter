@@ -78,3 +78,7 @@ The homepage now offers accessible visitor and Royal Arch joining information, g
 - GitHub CI now checks internal navigation, linked files, alternative text, ARIA references, duplicate IDs and external-link opener safety with scripts/audit-review.mjs.
 - Review guide now has keyboard skip navigation. Privacy language clarifies third-party technical requests may still be processed; it does not collect feedback through a form.
 - Static tests cannot replace manual responsive/mobile QA, remote link availability or production security review.
+
+## Review handoff and revision verification
+- See REVIEW_HANDOFF.md for checked capabilities, unresolved acceptance gates and the Chapter decision request.
+- /revision.txt is generated from git HEAD during build; the CI workflow checks it against GITHUB_SHA. Verify it on the live Worker to confirm actual deployment rather than assuming a green CI equals deployment.

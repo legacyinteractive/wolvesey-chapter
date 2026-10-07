@@ -69,4 +69,5 @@ assert.equal(await readFile('favicon.svg', 'utf8'), logo, 'Favicon must match th
 assert.equal(config.name, 'wolvesey-chapter');
 assert.equal(config.assets.directory, './dist');
 assert.match(await readFile('scripts/build.mjs', 'utf8'), /dist\/health\.txt/);
+assert.match(await readFile('scripts/build.mjs', 'utf8'), /dist\/revision\.txt/);
 console.log('Wolvesey Chapter source and Wrangler configuration checks passed.');

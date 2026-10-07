@@ -41,3 +41,5 @@ jobs:
           cmp dist/favicon.svg dist/assets/royal-arch-logo.svg
           test -s dist/assets/wolvesey-companion-bw.png
           grep -Fx 'ok: wolvesey-chapter' dist/health.txt
+          test -s dist/revision.txt
+          grep -Fx "$GITHUB_SHA" dist/revision.txt
